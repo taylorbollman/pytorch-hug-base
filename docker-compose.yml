@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  my_hugtranformer_service:
+    image: gpu-and-tranformers-img
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: tail -f /dev/null
+    volumes:
+      - ./pytorch-huggingface-tutorial:/code  # Bind mount for development
+    environment:
+      - "ENV_VAR=value"
+    ports:
+      - "8000:8000"  # Map port 8000 inside the container to port 8000 on the host
+    devices:
+      - "/dev/nvidia0:/dev/nvidia0"
+      - "/dev/nvidiactl:/dev/nvidiactl"
+      - "/dev/nvidia-uvm:/dev/nvidia-uvm"
