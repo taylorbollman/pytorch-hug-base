@@ -1,5 +1,5 @@
 # Use Hugging Face's PyTorch GPU image as base
-FROM huggingface/transformers-pytorch-gpu
+FROM huggingface/transformers-pytorch-gpu:latest
 
 # Set working directory
 WORKDIR /code
