@@ -22,7 +22,7 @@ COPY . .
 RUN mkdir -p /root/.ssh/
 
 # Move the authorized_keys file into place
-RUN mv /code/authorized_keys /root/.ssh/authorized_keys
+# RUN mv /code/authorized_keys /root/.ssh/authorized_keys
 
 
 
