@@ -1,5 +1,5 @@
 # Use Hugging Face's PyTorch GPU image as base
-FROM huggingface/transformers-pytorch-gpu:latest
+FROM DIGEST:sha256:57dbbd230f11bed0c56c14d8491f6af1b16da7593fb54f7783d23f85df4a167d
 
 # Set working directory
 WORKDIR /code
