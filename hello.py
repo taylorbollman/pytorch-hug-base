@@ -7,8 +7,8 @@ hello = tf.constant('Hello, TensorFlow!')
 tense = torch.zeros(3, 3)
 
 # Start tf session
-sess = tf.Session()
+# sess = tf.Session()
 
-# Run the op
-print(sess.run(hello))
-print(tense)
+# # Run the op
+# print(sess.run(hello))
+# print(tense)
