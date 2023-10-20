@@ -2,6 +2,7 @@ version: '3.8'
 services:
   my_hugtranformer_service:
     image: gpu-and-tranformers-img
+    runtime: nvidia
     build: 
       context: .
       dockerfile: Dockerfile
