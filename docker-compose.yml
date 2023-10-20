@@ -2,6 +2,7 @@ version: '3.8'
 services:
   my_hugtranformer_service:
     image: gpu-and-tranformers-img
+    command: ["--gpus", "all"]
     build: 
       context: .
       dockerfile: Dockerfile
@@ -10,6 +11,7 @@ services:
       - ./pytorch-huggingface-tutorial:/code
     environment:
       - "ENV_VAR=value"
+      - "NVIDIA_VISIBLE_DEVICES=all"
     ports:
       - "8000:8000"
     devices:
