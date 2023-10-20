@@ -10,6 +10,7 @@ services:
       - ./pytorch-huggingface-tutorial:/code  # Bind mount for development
     environment:
       - "ENV_VAR=value"
+      - "NVIDIA_VISIBLE_DEVICES=all"
     ports:
       - "8000:8000"  # Map port 8000 inside the container to port 8000 on the host
     devices:
